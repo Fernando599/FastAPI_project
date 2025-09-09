@@ -8,5 +8,5 @@ app = FastAPI()
 
 
 @app.get('/', status_code=HTTPStatus.OK, response_model=Message)
-def read_root():
+def read_root() -> dict[str, str]:
     return {'message': 'Deus é fiel'}
